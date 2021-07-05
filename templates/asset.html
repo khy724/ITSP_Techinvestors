@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Allocation Calculator</title>
+</head>
+<body>
+    <form action="result.html" method="POST">
+        <h3>Enter age:</h3>
+        <input type="text" name="age" id="age">
+        <br>
+        <h3>Enter amount to be invested:</h3>
+        <input type="text" name="amount" id="amount">
+        <br><br><br>
+        <!--<form action="/action_page.php">
+            <label for="risk_profiles1">Choose a risk profile:</label>
+            <select name="risk_profiles" id="risk profiles">
+              <option value="mod">Moderate</option>
+              <option value="very_cons">Very Conservative</option>
+              <option value="cons">Conservative</option>
+              <option value="agr">Aggressive</option>
+              <option value="very_agr">Very Aggressive</option>
+            </select>-->
+            <select name="filter" id="filter" onchange="getvalue(this)">
+              <option value=null></option>  
+              <option value="mod">Moderate</option>
+              <option value="very_cons">Very Conservative</option>
+              <option value="cons">Conservative</option>
+              <option value="agr">Aggressive</option>
+              <option value="very_agr">Very Aggressive</option>
+            </select>
+            <br><br>
+            <script>
+                  var profile;
+                  function getvalue(select_object){
+                     profile = select_object.options[select_object.selectedIndex].value;
+                    
+                  }
+            </script>
+            
+          </form>
+          
+        
+            <input type="submit" onclick="handleSubmit()" value="Submit">
+        
+        <script>
+            function handleSubmit(){
+            const amount= document.getElementById("amount").value;
+            const age= document.getElementById("age").value;
+            //const profile= document.getElementById("risk_profiles").value;
+            sessionStorage.setItem("age", age);
+            sessionStorage.setItem("amount", amount);
+            sessionStorage.setItem("profile", profile);
+            //sessionStorage.setItem("profile",profile);
+            window.location.href = "result.html";
+        }
+        </script>
+        
+    </form>
+    
+</body>
+</html>

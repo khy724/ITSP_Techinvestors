@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+	<style>
+		table {
+		  margin: 0 auto;
+		  margin-bottom: 100px;
+		  text-align: center;
+		  border-collapse: collapse;
+		  border: 1px solid #d4d4d4;
+		  height: 500px; 
+		}
+		 
+		tr:nth-child(even) {
+		  background: #d4d4d4;
+		}
+		 
+		th, td {
+		  padding: 10px 30px;
+		}
+		 
+		th {
+		  border-bottom: 1px solid #d4d4d4;
+		}
+	</style>
+</head>
+<body>
+	<!--<button onclick="myFunction()">fd rates</button>
+    <script src="CsvToTable.js"></script>
+    <script>
+	    
+		    var csvtotable = new CsvToTable({
+		        csvFile: 'fd_data.csv'
+	        });
+	    function myFunction(){   
+	    csvtotable.run();};
+    </script>-->
+	<script>
+		const age =sessionStorage.getItem('age');
+		var csv;
+		if(age>=65){
+             csv='senior_cit_fd.csv';
+		}
+		else{
+			csv= 'fd_data.csv';
+		}
+
+	</script>
+	<button onclick="myFunction()">fd rates</button>
+    <script src="CsvToTable.js"></script>
+    <script>
+	    
+		    var csvtotable = new CsvToTable({
+		        csvFile: csv
+	        });
+	    function myFunction(){   
+	    csvtotable.run();};
+    </script>
+	
+</body>
+</html>
