@@ -1,0 +1,103 @@
+:root{
+    --colour_1: #2684B7;
+}
+body {
+    background: black;
+    margin: 0;
+    font-family:  sans-serif;
+    color: white;
+    //text-align: center;
+    padding: 1em, 1em;
+    margin:1 em;
+}
+.title_bar{
+    background: #E3F1F9;
+    block-size: 7em;
+
+    .logo{
+        text-align: center;
+        justify-content: center;
+        display:block;
+        text-decoration: none;
+        font-weight: bold;
+        color:black;
+        font-size: 5em;
+        padding:0.3em;
+        
+
+        span{
+            color:var(--colour_1) ;
+        }
+    }
+}
+.navbar {
+    
+    .container{
+        
+        nav{
+            background: var(--colour_1);
+        block-size: 1em;
+        border-style: solid;
+        border-color: white;
+        //padding: 1em;
+            .primary-nav{
+    
+                list-style-type: none;
+                border-color: white;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: var(--colour_1);
+                .current{
+                    background: black;
+                }
+                li{
+                    float: left
+                }
+            
+                li a{
+                    display: block;
+                    color: white;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+            
+                }
+                li a:hover:not(.active) {
+                    background-color: #145274;
+                  }
+            }
+        }
+    }
+}
+.hero-img{
+    margin-top: 6em;
+    text-align: center;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+    /*.image { 
+        position: relative; 
+        width: 100%; 
+        text-align:center;
+        display: block;
+     }
+     
+     h1 { 
+        position: absolute; 
+        top: 100px; 
+        left: 0; 
+        width: 100%; 
+     }
+     h1 span { 
+        color: white; 
+        font: bold 24px/45px Helvetica, Sans-Serif; 
+        letter-spacing: -1px;  
+        background: var(--colour_1); 
+        background: #29ABE2;
+        padding: 10px; 
+     }*/
+

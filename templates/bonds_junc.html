@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width= device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>bonds</title>
     <link rel="stylesheet" href="/static/main.css">
 </head>
 <body>
@@ -52,9 +52,8 @@ const surname = params.get('surname'); */
 /* const name = localStorage.getItem('NAME');
 const surname = localStorage.getItem('SURNAME'); */
 
-const age = sessionStorage.getItem('age');
-const amount = sessionStorage.getItem('amount');
-const profile = sessionStorage.getItem('profile');
+
+const bonds_per = sessionStorage.getItem('bonds_per');
 
 /*document.getElementById('result-age').innerHTML = age;
 document.getElementById('result-amount').innerHTML = amount;
@@ -65,21 +64,18 @@ document.getElementById('result-profile').innerHTML = profile;*/
     <script>
         //console.log(age);
        window.addEventListener('load',() =>{
-       if(profile === 'mod'){
-            window.location.href = "/moderate/";
+       if(bonds_per === '0_1'){
+            window.location.href = '/bond_0_1/';
             
         }
-        else if(profile === 'very_cons'){
-            window.location.href = "/very_cons/";
+        else if(bonds_per === '1_3'){
+            window.location.href = "/bond_1_3/";
         }
-        else if(profile === 'cons'){
-             window.location.href = "/cons/";
+        else if(bonds_per === '3_5'){
+             window.location.href = "/bond_3_5/";
         }
-        else if(profile === 'agr'){
-            window.location.href = "/agr/";
-        }
-        else if(profile === 'very_agr'){
-            window.location.href = "/very_agr/";
+        else if(bonds_per === '5_'){
+            window.location.href = "/bond_5_/";
         }
         /*else{
             window.alert('error');

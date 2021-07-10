@@ -1,0 +1,43 @@
+{% extends 'base_tables.html' %}
+
+{% block head %} 
+<title> Bonds </title>
+{% endblock %}
+
+{% block body %}
+<br><br><br><br>
+
+<div class="cl">
+<center><h1>Table</h1></center>
+<table class="table caption-top align-content-center">
+    <thead>
+      <tr> 
+        <th scope="col">Name</th>
+        <th scope="col">Coupon</th>
+        <th scope="col">Call Date</th>
+        <th scope="col">Ratings</th>
+        <th scope="col">Type of bond</th>
+        <th scope="col">Yeild</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for i in range(NAME|length) %}
+            <tr>
+                <td>{{ NAME.iloc[i] }}</td>
+                <td>{{ COUPON.iloc[i] }}</td>
+                <td>{{ CALL_DATE.iloc[i] }}</td>
+                <td>{{ RATING.iloc[i] }}</td>
+                <td>{{ TYPE_OF_BOND.iloc[i] }}</td>
+                <td>{{ YEILD.iloc[i] }}</td>
+                <td>{{ PRICE.iloc[i] }}</td>
+
+            </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+<br><br>
+
+</div>
+
+{% endblock %} 

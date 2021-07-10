@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>risk profile options</title>
+    <link rel="stylesheet" href="/static/main.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load("current", {packages:["corechart"]});
@@ -30,7 +31,28 @@
     </script>
 </head>
 <body>
-    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+  <div class='title_bar'>
+    <a class='logo' href="#">
+        Tech
+        <span>Investors</span>
+    </a>
+</div>
+<!--<div class="navbar">
+    <div class="container">
+        <nav>
+            <ul class="primary-nav">
+                <div class="current_cont">
+                <li class="current">
+                <a href="#">Home  </a>
+                </li>
+                <li>
+                <a href="asset.html">Asset Allocation Calculator</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>-->
+    <div class="hero-img" id="piechart_3d" style="width: 900px; height: 500px;"></div>
     <br><br>
     <ul>
       <li>Stocks
@@ -52,17 +74,17 @@
       <li>someone with a portfolio that primarily includes investments in cash and bonds with some allocation in equities</li>
       
     </ul>
-    <a href ="fd.html">
+    <form action='/fd/' method='POST'>
       <button>click here to view fd rates</button>
-    </a>
-    <a href ="bonds.html">
+  </form>
+    <form action='/bonds/' method='POST'>
       <button>click here to get more info on bonds</button>
-    </a>
-    <a href ="mf.html">
+  </form>
+    <form action='/mf/' method='POST'>
       <button>click here to get more info on mutual funds</button>
-    </a>
-    <a href ="stocks.html">
+    </form>
+    <form action='/stocks/' method='POST'>
       <button>click here to get more info on stocks</button>
-    </a>
+    </form>
 </body>
 </html>

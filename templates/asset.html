@@ -5,9 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asset Allocation Calculator</title>
+    <link rel="stylesheet" href="/static/main.css">
 </head>
 <body>
-    <form action="result.html" method="POST">
+  <div class='title_bar'>
+    <a class='logo' href="#">
+        Tech
+        <span>Investors</span>
+    </a>
+</div>
+<div class="navbar">
+    <div class="container">
+        <nav>
+            <ul class="primary-nav">
+                
+                <li>
+                <a href="/">Home  </a>
+                </li>
+                <li class="current">
+                <a href="#">Asset Allocation Calculator</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+    <form action="/asset/" method="POST" class="hero-img">
+        
         <h3>Enter age:</h3>
         <input type="text" name="age" id="age">
         <br>
@@ -39,11 +62,11 @@
                     
                   }
             </script>
-            
+            <input type="submit" class="hero-img" onclick="handleSubmit()" value="Submit">
           </form>
           
         
-            <input type="submit" onclick="handleSubmit()" value="Submit">
+            
         
         <script>
             function handleSubmit(){

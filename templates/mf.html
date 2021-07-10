@@ -1,31 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Javascript</title>
-	<style>
-		table {
-		  margin: 0 auto;
-		  margin-bottom: 100px;
-		  text-align: center;
-		  border-collapse: collapse;
-		  border: 1px solid #d4d4d4;
-		  height: 500px; 
-		}
-		 
-		tr:nth-child(even) {
-		  background: #d4d4d4;
-		}
-		 
-		th, td {
-		  padding: 10px 30px;
-		}
-		 
-		th {
-		  border-bottom: 1px solid #d4d4d4;
-		}
-	</style>
+	<title>Mutual funds</title>
+	<link rel="stylesheet" href="/static/categories.css">
+	
 </head>
 <body>
+	<div class='title_bar'>
+        <a class='logo' href="#">
+            Tech
+            <span>Investors</span>
+        </a>
+    </div>
 	<!--<button onclick="myFunction()">fd rates</button>
     <script src="CsvToTable.js"></script>
     <script>
@@ -47,12 +33,13 @@
 		}
 
 	</script>-->
-	<button onclick="myFunction()">fd rates</button>
-    <script src="CsvToTable.js"></script>
+	<h1>Mutual Funds</h1>
+	<button onclick="myFunction()">mutual funds rates</button>
+    <script src="/static/CsvToTable.js"></script>
     <script>
 	    
 		    var csvtotable = new CsvToTable({
-		        csvFile: "mutual_funds.csv"
+		        csvFile: "../mutual_funds.csv"
 	        });
 	    function myFunction(){   
 	    csvtotable.run();};

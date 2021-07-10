@@ -1,0 +1,33 @@
+{% extends 'base_tables.html' %}
+
+{% block head %} 
+<title> fd rates </title>
+{% endblock %}
+
+{% block body %}
+<br><br><br><br>
+
+<div class="cl">
+<center><h1>Top fd rates for you!</h1></center>
+<table class="table caption-top align-content-center">
+    <thead>
+      <tr> 
+        <th scope="col">sr. no</th>
+        <th scope="col">list</th>
+      </tr>
+    </thead>
+    <tbody>
+      <h1>fd</h1>
+        <!--{% for i in range(SR|length) %}
+            <tr>
+                <td>{{ SR.iloc[i] }}</td>
+                <td>{{ LIST.iloc[i] }}</td>
+            </tr>
+        {% endfor %}-->
+    </tbody>
+  </table>
+<br><br>
+
+</div>
+
+{% endblock %} 

@@ -1,0 +1,47 @@
+:root{
+    --colour_1: #2684B7;
+    --colour_2: #E3F1F9;
+}
+.body{
+    background:black;
+}
+.title_bar{
+    background: #E3F1F9;
+    block-size: 7em;
+
+    .logo{
+        text-align: center;
+        justify-content: center;
+        display:block;
+        text-decoration: none;
+        font-weight: bold;
+        color:black;
+        font-size: 5em;
+        padding:0.3em;
+        
+
+        span{
+            color:var(--colour_1) ;
+        }
+    }
+}
+table {
+    margin: 0 auto;
+    margin-bottom: 100px;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid var(--colour_2);
+    height: 500px; 
+  }
+   
+  tr:nth-child(even) {
+    background: var(--colour_2);
+  }
+   
+  th, td {
+    padding: 10px 30px;
+  }
+   
+  th {
+    border-bottom: 1px solid var(--colour_2);
+  }
