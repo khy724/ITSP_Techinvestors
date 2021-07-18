@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= device-width, initial-scale=1.0">
+    <title>bonds</title>
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+
+<body>
+    <div class='title_bar'>
+        <a class='logo' href="#">
+            Tech
+            <span>Investors</span>
+        </a>
+    </div>
+    <!--<div class="navbar">
+        <div class="container">
+            <nav>
+                <ul class="primary-nav">
+                    <div class="current_cont">
+                    <li class="current">
+                    <a href="#">Home  </a>
+                    </li>
+                    <li>
+                    <a href="asset.html">Asset Allocation Calculator</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>-->
+
+    <!--<h2>
+        Age: <span id="result-age" />
+    </h2>
+    <h2>
+        Amount: <span id="result-amount" />
+    </h2>
+    <h2>
+        Profile: <span id="result-profile" />
+    </h2>-->
+
+    <script>
+
+
+        // Via Query parameters - GET
+        /* const params = (new URL(document.location)).searchParams;
+        const name = params.get('name');
+        const surname = params.get('surname'); */
+
+        // Via local Storage
+        /* const name = localStorage.getItem('NAME');
+        const surname = localStorage.getItem('SURNAME'); */
+
+
+        const mf_time = sessionStorage.getItem('mf_time');
+
+        /*document.getElementById('result-age').innerHTML = age;
+        document.getElementById('result-amount').innerHTML = amount;
+        document.getElementById('result-profile').innerHTML = profile;*/
+
+
+    </script>
+    <script>
+        //console.log(age);
+        window.addEventListener('load', () => {
+            if (mf_time === "1_w") {
+                window.location.href = '/1_week/';
+
+            }
+            else if (mf_time === '1_m') {
+                window.location.href = "/1_month/";
+            }
+            else if (mf_time  === '3_m') {
+                window.location.href = "/3_months/";
+            }
+            else if (mf_time  === '6_m') {
+                window.location.href = "/6_months/";}
+
+		    else if (mf_time === '1_y') {
+                    window.location.href = "/1_year/";
+                }
+            else if (mf_time  === '3_y') {
+                    window.location.href = "/3_years/";
+                }
+            else if (mf_time  === '5_y') {
+                    window.location.href = "/5_years/";
+                }
+                /*else{
+                    window.alert('error');
+                }*/
+            })
+    </script>
+
+
+</body>
+
+</html>

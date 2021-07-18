@@ -46,51 +46,74 @@
                 <a href="/">Home  </a>
                 </li>
                 <li class="current">
-                <a href="#">Asset Allocation Calculator</a>
+                <a href="/asset/">Asset Allocation Calculator</a>
                 </li>
             </ul>
         </nav>
     </div>
 </div>
+<br><br><br>
+<div class="cont">
+<h1 align="center">Risk Profile: Moderate</h1>
+<br>
     <div class="hero-img" id="piechart_3d" style="width: 900px; height: 500px;"></div>
     <br><br>
-    <ul>
+    <div align="center">
+    <ul class='anno' >
       <li>Stocks
-        <ul>
-          <li>Large Cap Blend 20%</li>
-          <li>Mid Cap Blend 20%</li>
-          <li>Small Cap Blend 10%</li>
-          <li>Emerging Markets 10%</li>
+        <ul class='neesho'>
+          <li>Large Cap Blend 20% &ensp; {{am*0.2}}</li>
+          <li>Mid Cap Blend 20% &ensp; {{am*0.2}}</li>
+          <li>Small Cap Blend 10% &ensp; {{am*0.1}}</li>
+          <li>Emerging Markets 10% &ensp; {{am*0.1}}</li>
         </ul>
       </li>
-      <li>Corporate Bonds 25%</li>
-      <li>Fd’s 5%</li>
-      <li>Mutual funds 10%</li>
+      <li>Corporate Bonds 25% &ensp; {{am*0.25}}</li>
+      <li>Fd’s 5% &ensp; {{am*0.05}}</li>
+      <li>Mutual funds 10% &ensp; {{am*0.1}}</li>
     </ul>
     <br><br><br>
-    <ul>
+    <div align="center">
+    <ul class="kiso">
       <li>looking for a balance between portfolio stability and portfolio appreciation</li>
       <li>willing and able to accept a moderate level of risk and return</li>
       <li>an investor focused on growth but looking for greater diversification</li>
       <li>someone with a portfolio that primarily includes a balance of investments in bonds and equities
       </li>
     </ul>
-    
-      <a href="/fd/">
-      <button>click here to view fd rates</button>
+  </div>
+  </div>
+  <div class="flex-container" >
+    <div>
+    <form action='/fdrate/' method="POST" align="center">
+      <a href="/fdrate/" >
+      <input type="submit" value="fd rates">
     </a>
+  </form>
+</div>
   
-    <!--<a href='/bonds/' >
-      <button>click here to get more info on bonds</button>
-    </a>-->
-    <form action="/bonds/" method="POST"> 
-      <button type="submit" name="b" id="b">click here to get more info on bonds</button>
+<div>
+    <form action="/bonds/" method="POST" align="center"> 
+      <input type="submit" name="b" id="b" value="bonds">
         </form>
+      </div>
+      <div>    
+    <form action='/mf/' method="POST" align="center">
     <a href='/mf/'>
-      <button>click here to get more info on mutual funds</button>
+      <input type="submit" value="mutual funds">
     </a>
+  </form>
+</div>
+  <div>
+  <form action='/stocks/' method="POST" align="center">
     <a href='/stocks/'>
-      <button>click here to get more info on stocks</button>
+      <input type="submit"  value="stocks">
     </a>
+    </form>
+  </div>
+    
+  </div>
+</div>
+    <br>
 </body>
 </html>

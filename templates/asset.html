@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asset Allocation Calculator</title>
     <link rel="stylesheet" href="/static/main.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
   <div class='title_bar'>
@@ -29,7 +33,7 @@
         </nav>
     </div>
 </div>
-    <form action="/asset/" method="POST" class="hero-img">
+    <form action="/asset/" method="POST" class="hero-img" align="center">
         
         <h3>Enter age:</h3>
         <input type="text" name="age" id="age">
@@ -46,6 +50,7 @@
               <option value="agr">Aggressive</option>
               <option value="very_agr">Very Aggressive</option>
             </select>-->
+            <h3>choose a suitable risk profile:</h3>
             <select name="filter" id="filter" onchange="getvalue(this)">
               <option value=null></option>  
               <option value="mod">Moderate</option>
@@ -54,7 +59,8 @@
               <option value="agr">Aggressive</option>
               <option value="very_agr">Very Aggressive</option>
             </select>
-            <br><br>
+            <br>
+            
             <script>
                   var profile;
                   function getvalue(select_object){
@@ -62,11 +68,37 @@
                     
                   }
             </script>
-            <input type="submit" class="hero-img" onclick="handleSubmit()" value="Submit">
+            <br>
+            <input type="submit"  onclick="handleSubmit()" value="Submit" align="center">
+            <br><br>
           </form>
-          
-        
+          <section class="writeup" align="center">
+        <p class="writeup" align="center">
+          <h2>Factors that contribute to risk profile</h2>
+          The biggest contributor to risk profile is age but there are several other factors that contribute in risk profile. Risk profile helps you identify your asset allocation.
+          <h3>1. Age</h3>
+          The younger you are, the more risks you can take. If you are just 25 years old and have no debt, no dependents etc you can take much more risk than someone who is 50 years old and has 2 children and a house loan to pay off. Hence you can invest more in equities as your investment horizon is longer.
+          <h3>2. Income & Debt</h3>
+          More income and less debt = more risks. If your income allows you to save 20-30% of your money every month, consider yourself lucky. If you have large debt that you are paying off then you will be hesitant to invest a large portion of your investments in equities.
+          <h3>3. Dependents</h3>
+          More dependents = less risky investments. If you are supporting your children’s education or your parents healthcare or 100s of other expenses that can be there for your dependents, then you would not want to invest a large part of your investments in risky assets.
+          <h3>4. Assets</h3>
+          If you already own a house and are not paying any home loan EMIs, kudos! If you own a lot of Jewlry or stocks or bonds etc that count as assets, then you are more financially secure than someone who does not own any assets. More assets you have, more risks you can take. That doesnt mean you should go ahead and buy risky stocks, but it is an indicator that you are more financially comfortable and can afford to take risks.
+          <h3>5. Savings/ Emergency funds</h3>
+          If you already have 6 months of savings in the bank, you will feel more comfortable taking risks and investing in riskier instruments. However if you have no liquid savings and you end up buying some small cap stocks that fall 50%, you will be trapped! Never make the mistake of investing in stocks before you have your emergency fund covered.
+          <h3>6. Risk Aversion</h3>
+          You might have the best of all of the above factors but you are a risk averse person in general. In that case you should invest less in risky instruments like direct equities and more in SIPs of mutual funds or debt/FDs.
+          <br><h2>Finding out your Asset Allocation based on your Risk Profile</h2>
+          If you come to think of it, it is very logical and you dont really need a financial advisor to help you with how much risk you should take. However, an investment advisor will help you direct your hard earned savings in the best of investment instruments in that risk profile.
+
+            It is absolutely recommended you talk to an investment advisor and have your risk profiled and asset allocation properly analyzed. The below table is just a bucket you might fall into but as I mentioned before, a lot of factors will go into deciding your ideal asset allocation.
             
+            I have tried to generalize the amount of risk you can take as per your age. As mentioned above, you should not follow this blindly but this should be a start!
+            As you age, the percentage of debt and FDs, Savings will increase and equity will reduce. The above table, does not take into account any investments in real estate or jewelry other than gold ETFs.
+            Do remember at the end of the day, it is all your money and where you invest is totally your responsibility. So dont take risks you cannot afford. Investing is risky and while you can reduce the risk, there is no way to completely eliminate it.
+        </p>
+        
+      </section>    
         
         <script>
             function handleSubmit(){

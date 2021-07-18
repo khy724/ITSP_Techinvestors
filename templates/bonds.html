@@ -2,10 +2,11 @@
 <html>
 <head>
 	<title>bonds</title>
-  <link rel="stylesheet" href="/static/categories.css">
+  <link rel="stylesheet" href="/static/main.css">
+  
 	
 </head>
-<body>
+<body bgcolor="black" >
   <div class='title_bar'>
     <a class='logo' href="#">
         Tech
@@ -22,7 +23,11 @@
 	    function myFunction(){   
 	    csvtotable.run();};
     </script>-->
-    <form action="/bonds_junc/" method="POST">
+    
+    <br><br>
+    <h1 align="center">Bonds</h1>
+    <form action="/bonds_junc/" method="POST" align="center" >
+        <h3>Select the time period for which you would like to invest</h3>
         <select name="filter" id="filter" onchange="getvalue(this)">
              <option value=null></option>   
             <option value="0_1">0-1 year</option>
@@ -30,13 +35,46 @@
             <option value="3_5">3-5 years</option>
             <option value="5_">5+ years</option>
           </select>
+          <br><br>
+          <input type="submit"  onclick="handleSubmit()" value="Submit"  align="center">
+          </form>
     <script>
             var bonds_per;
             function getvalue(select_object){
                bonds_per = select_object.options[select_object.selectedIndex].value;
               }
     </script>
-    <input type="submit" class="hero-img" onclick="handleSubmit()" value="Submit">
+    
+    <br><br>
+    <div class="writeup" align="center">
+    <p class="writeup" align="center" >
+        
+        <h4>Investment Bonds are debt instruments in which the authorized issuer owes the bond holders a debt. Depending on the terms of the type of bonds, the authorized issuer is obliged to pay interest and/or repay the principal at a later date upon maturity. In simpler terms, a bond is a formal
+         contract to repay borrowed money with an interest at fixed intervals. Investment bonds are a way to raise money. When you purchase any type of bond (government, convertible, callable, etc.), you are lending money to the issuer which may be a corporation, the government, a federal agency or any other entity. In return, the issuer promises to pay a specified rate of interest during the life of the bond. The issuer also repays the face value of the bond when upon maturity of the term.
+        </h4>
+        <h2 >Type of bonds</h2>
+        <br>
+        <h3 >ZERO-COUPON BONDS:</h3>
+        These investment bonds are issued at a discount, but redeemed at the principal amount.
+            <h3>G-SEC BONDS:</h3>
+            These are issued by the government and are one of the safest types of bonds to invest in.
+             <h3>CORPORATE BONDS</h3>
+            These types of bonds are simple bonds, wherein a company borrows and pays interest at regular intervals.
+             
+            <h3>INFLATION-LINKED BONDS:</h3>
+            In these types of bonds, principal amount and interest payments are indexed to inflation.
+             
+            <h3>CONVERTIBLE BONDS:</h3>
+            The bond holder has the option to convert these types of bond into equity on pre-specified terms.
+             
+            <h3>Sovereign Gold Bond</h3>
+            Sovereign Gold Bonds are the safest way to buy digital Gold, as they are issued by Govt. of India.
+             <br>
+            RBI BondGovernment of India has announced to launch Floating Rate Savings Bonds, 2020 (Taxable) scheme commencing from July 01, 2020 to enable Resident Indians/HUF to invest in a taxable bond, without any monetary ceiling.
+             
+            
+    </p>
+</div>
     <script>
         function handleSubmit(){
         //const profile= document.getElementById("risk_profiles").value;
@@ -69,6 +107,37 @@
 	    function myFunction(){   
 	    csvtotable.run();};
     </script>-->
+    <div class="flex-container" >
+        <div>
+        <form action='/fdrate/' method="POST" align="center">
+          <a href="/fdrate/" >
+          <input type="submit" value="fd rates">
+        </a>
+      </form>
+    </div>
+      
+    <div>
+        <form action="/bonds/" method="POST" align="center"> 
+          <input type="submit" name="b" id="b" value="bonds">
+            </form>
+          </div>
+          <div>    
+        <form action='/mf/' method="POST" align="center">
+        <a href='/mf/'>
+          <input type="submit" value="mutual funds">
+        </a>
+      </form>
+    </div>
+      <div>
+      <form action='/stocks/' method="POST" align="center">
+        <a href='/stocks/'>
+          <input type="submit"  value="stocks">
+        </a>
+        </form>
+      </div>
+        
+      </div>
+        <br>
 	
 </body>
 </html>

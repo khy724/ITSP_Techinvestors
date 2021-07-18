@@ -1,33 +1,128 @@
-{% extends 'base_tables.html' %}
-
-{% block head %} 
-<title> fd rates </title>
-{% endblock %}
-
-{% block body %}
-<br><br><br><br>
-
-<div class="cl">
-<center><h1>Top fd rates for you!</h1></center>
-<table class="table caption-top align-content-center">
-    <thead>
-      <tr> 
-        <th scope="col">sr. no</th>
-        <th scope="col">list</th>
-      </tr>
-    </thead>
-    <tbody>
-        <h1>sen fd</h1>
-        <!--{% for i in range(SR|length) %}
-            <tr>
-                <td>{{ SR.iloc[i] }}</td>
-                <td>{{ LIST.iloc[i] }}</td>
-            </tr>
-        {% endfor %}-->
-    </tbody>
-  </table>
-<br><br>
-
+<!DOCTYPE html>
+<html>
+<head>
+	<title>senior citizen fd rates</title>
+  <link rel="stylesheet" href="/static/main.css">
+	
+</head>
+<body>
+  <div class='title_bar'>
+    <a class='logo' href="#">
+        Tech
+        <span>Investors</span>
+    </a>
 </div>
 
-{% endblock %} 
+<br><br>
+	<!--<button onclick="myFunction()">fd rates</button>
+    <script src="CsvToTable.js"></script>
+    <script>
+	    
+		    var csvtotable = new CsvToTable({
+		        csvFile: 'fd_data.csv'
+	        });
+	    function myFunction(){   
+	    csvtotable.run();};
+    </script>-->
+    <h1 align="center">Fixed Deposits</h1>
+    <h2 align="center">Select the time period of investment</h2>
+    <form action="/sen_junc/" method="POST" align="center">
+        <select name="filter" id="filter" onchange="getvalue(this)">
+             <option value=null></option>   
+            <option value="0_1">less than 1 year</option>
+            <option value="1_5">1-5 years</option>
+            <option value="5_">5+ years</option>
+          </select>
+    <script>
+            var sen_per;
+            function getvalue(select_object){
+               sen_per = select_object.options[select_object.selectedIndex].value;
+              }
+    </script>
+    <input type="submit" align="center" onclick="handleSubmit()" value="Submit">
+    <script>
+        function handleSubmit(){
+        //const profile= document.getElementById("risk_profiles").value;
+        sessionStorage.setItem("sen_per", sen_per);
+        //sessionStorage.setItem("profile",profile);
+        
+    }
+    </script>
+    <br>
+    <div class="writeup">
+    <p class="writeup" align="center">
+        <h4>Bank fixed deposits (FDs) are usually the first port of call for those beginning their investment journey. Income certainty and capital protection features of bank FDs also make them immensely popular among investors with low-risk appetite and those investing to meet their short-term financial goals.
+        </h4>
+        <h3>Pros</h3>
+        <br>
+        <h3>Protection in the form of deposit insurance cover:</h3>
+        <h4>Fixed deposits opened with scheduled banks are covered under the deposit insurance programme of Deposit Insurance and Credit Guarantee Corporation (DICGC), a subsidiary of the Reserve Bank of India (RBI). The insurance cover is applicable on cumulative bank deposits, which includes fixed deposits, savings account, recurring deposits and current account, of up to Rs5 lakh per bank, per depositor in the event of bank failures.
+        </h4>
+        <h3>Assured returns on investments:</h3>
+        <h4>The booked interest rates of bank FDs remain fixed till their maturity, irrespective of any change in the banks’ FD card rates in the interim. For instance, if an individual opens a bank fixed deposit of 2 years tenure at 6% p.a., the interest rate will stay the same till the end of 2 years tenure. This provides a high degree of income certainty in FDs, even higher than those offered by most small saving schemes.
+        </h4>
+        <h3>Availability of secured credit card:</h3>
+        <h4>Secured credit cards are offered against the collateral of FD. “Secured credit cards can be helpful for those who aren’t able to get regular credit cards due to no or low credit score, inadequate income, unserviceable location, company’s profile or job profile. Note that the secured card users also continue to earn interest on their FDs used as collateral,"</h4>
+        <h3>Availability of loan against FD:</h3>
+        <h4>Most banks offer loans against FD, usually in the form of an overdraft facility, wherein a credit limit is sanctioned to the borrower based on the FD amount submitted as collateral. The borrower continues to earn interest on the pledged FDs during the loan tenure. Borrowers can withdraw up to the sanctioned amount from their overdraft account and repay it basis their repayment capacity. The interest is levied on the amount drawn till its repayment.</h4>
+        
+        </p>
+    </div>
+    <div class="flex-container" >
+        <div>
+        <form action='/fdrate/' method="POST" align="center">
+          <a href="/fdrate/" >
+          <input type="submit" value="fd rates">
+        </a>
+      </form>
+    </div>
+      
+    <div>
+        <form action="/bonds/" method="POST" align="center"> 
+          <input type="submit" name="b" id="b" value="bonds">
+            </form>
+          </div>
+          <div>    
+        <form action='/mf/' method="POST" align="center">
+        <a href='/mf/'>
+          <input type="submit" value="mutual funds">
+        </a>
+      </form>
+    </div>
+      <div>
+      <form action='/stocks/' method="POST" align="center">
+        <a href='/stocks/'>
+          <input type="submit"  value="stocks">
+        </a>
+        </form>
+      </div>
+        
+      </div>
+        <br>
+    <!--<script>
+         if(profile === '0_1'){
+             csv ="../india_bonds_0_1.csv";
+         }
+         else if(profile === '1_3'){
+             csv = "../india_bonds_1_3.csv";
+         }
+         else if(profile === '3_5'){
+             csv = "../india_bonds_3_5.csv";
+         }
+         else{
+             csv = "../india_bonds_5_plus.csv";
+         }
+    </script>
+	<button onclick="myFunction()">top bond schemes</button>
+    <script src="/static/CsvToTable.js"></script>
+    <script>
+	    
+		    var csvtotable = new CsvToTable({
+		        csvFile: csv
+	        });
+	    function myFunction(){   
+	    csvtotable.run();};
+    </script>-->
+	
+</body>
+</html>

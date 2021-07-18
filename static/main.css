@@ -1,18 +1,50 @@
 :root {
   --colour_1: #2684B7;
+  --colour_2: #006BE9;
 }
 
 body {
-  background: black;
+  background: #9aedfc;
   margin: 0;
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  color: black;
+  padding: 5em, 5em;
+  margin: 4 em;
+}
+
+.neesho {
+  background: #3399ff;
+  padding: 20px;
+  width: 500px;
+}
+
+.anno {
+  background: var(--colour_1);
+  padding: 20px;
+  width: 550px;
   color: white;
-  padding: 1em, 1em;
-  margin: 1 em;
+}
+
+.kiso {
+  padding: 20px;
+  width: 700px;
+}
+
+/*ol li {
+    background: #ffe5e5;
+    padding: 5px;
+    margin-left: 35px;
+  }*/
+.neesho li {
+  background: #cce5ff;
+  margin: 5px;
+  width: 500px;
+  color: var(--colour_1);
 }
 
 .title_bar {
-  background: #E3F1F9;
+  background: black;
   block-size: 7em;
 }
 
@@ -23,14 +55,15 @@ body {
           justify-content: center;
   display: block;
   text-decoration: none;
+  font: monospace;
   font-weight: bold;
-  color: black;
+  color: white;
   font-size: 5em;
   padding: 0.3em;
 }
 
 .title_bar .logo span {
-  color: var(--colour_1);
+  color: var(--colour_2);
 }
 
 .navbar .container nav {
@@ -46,7 +79,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: var(--colour_1);
+  background-color: var(--colour_2);
 }
 
 .navbar .container nav .primary-nav .current {
@@ -75,7 +108,75 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 0em 20em;
+  width: 7em;
+}
+
+.flex-container > div {
+  width: 100px;
+  margin: 80px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+.writeup {
+  font: "Verdana";
+  text-align: "center";
+  padding: 0em 6em;
+  width: 60em;
+  font-size: 1.1em;
+}
+
+p {
+  text-align: center;
+  width: 60em;
+}
+
+input[type=submit], input[type=reset] {
+  background-color: var(--colour_2);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+table {
+  margin: 0 auto;
+  margin-bottom: 100px;
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid var(--colour_2);
+  height: 500px;
+}
+
+tr:nth-child(even) {
+  background: var(--colour_2);
+}
+
+th, td {
+  padding: 10px 30px;
+}
+
+th {
+  border-bottom: 1px solid var(--colour_2);
+}
+
+button {
+  background-color: var(--colour_2);
+  border: none;
+  font-size: 1em;
+  font: white;
 }
 
 /*.image { 

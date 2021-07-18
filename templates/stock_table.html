@@ -5,40 +5,48 @@
 {% endblock %}
 
 {% block body %}
-<br><br><br><br>
+<div class='title_bar'>
+  <a class='logo' href="#">
+      Tech
+      <span>Investors</span>
+  </a>
+</div>
+
+<br><br>
+
 
 <div class="cl">
 <center><h1>Table</h1></center>
 <table class="table caption-top align-content-center">
     <thead>
       <tr> 
-        <th scope="col">Name</th>
-        <th scope="col">Coupon</th>
-        <th scope="col">Call Date</th>
-        <th scope="col">Ratings</th>
-        <th scope="col">Type of bond</th>
-        <th scope="col">Yeild</th>
-        <th scope="col">Price</th>
+        <th scope="col">company name</th>
+        <th scope="col">p/e ratio</th>
+        <th scope="col">1 yr return pr</th>
+        <th scope="col">payout ratio pr</th>
+        <th scope="col">3 yr avg div payout</th>
+        <th scope="col">prize value</th>
+        <th scope="col">1 yr profit growth pr</th>
+        
       </tr>
     </thead>
     <tbody>
-        {% for i in range(NAME|length) %}
+        {% for i in range(COMP|length) %}
             <tr>
-                <td>{{ NAME.iloc[i] }}</td>
-                <td>{{ COUPON.iloc[i] }}</td>
-                <td>{{ CALL_DATE.iloc[i] }}</td>
-                <td>{{ RATING.iloc[i] }}</td>
-                <td>{{ TYPE_OF_BOND.iloc[i] }}</td>
-                <td>{{ YEILD.iloc[i] }}</td>
-                <td>{{ PRICE.iloc[i] }}</td>
-
+                <td>{{ COMP.iloc[i] }}</td>
+                <td>{{ P_E.iloc[i] }}</td>
+                <td>{{ Y_1_RET.iloc[i] }}</td>
+                <td>{{ PRP.iloc[i] }}</td>
+                <td>{{ Y_3_AVG.iloc[i] }}</td>
+                <td>{{ PV.iloc[i] }}</td>
+                <td>{{ Y_1_PG.iloc[i] }}</td>
+                
+                
             </tr>
         {% endfor %}
     </tbody>
   </table>
 <br><br>
-
-</div>
 <div class="flex-container" >
   <div>
   <form action='/fdrate/' method="POST" align="center">
@@ -71,7 +79,6 @@
 </div>
   <br>
 
-{% endblock %} 
+</div>
 
-
-
+{% endblock %}

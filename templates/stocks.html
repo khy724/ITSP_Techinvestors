@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stocks</title>
+    <link rel="stylesheet" href="/static/main.css">
+    
+</head>
+<body>
+  <div class='title_bar'>
+    <a class='logo' href="#">
+        Tech
+        <span>Investors</span>
+    </a>
+</div>
+
+<br><br>
+<h1 align="center">Stocks</h1>
+    <br>
+    <form action='/dividend/' method='POST' align="center">
+      <input type="submit" value="top 5 stock on the basis of dividend">
+  </form>
+  <br>
+    <form action='/pred/' method='POST' align="center">
+     <!--<button>top 5 stocks on the basis of prediction</button>-->
+      <label for="v">select no. of days of prediction</label><br>
+      1<input type="range" id="vol" name="vol" min="1" max="60">60
+      <br>
+      <input type="submit" value="top 5 stocks on the basis of prediction">
+      <p id="demo" style="color: white"></p>
+
+  </form>
+  
+  <br><br>
+  <div class="writeup">
+      
+  
+<p class="writeup" align="center">
+    <h2> Basic information about Stock Market</h2><br>
+    Most investors would be well-advised to build a diversified portfolio of stocks or stock index funds and hold on to it through good times and bad. But investors who like a little more action engage in stock trading. Stock trading involves buying and selling stocks frequently in an attempt to time the market.
+The goal of stock traders is to capitalize on short-term market events to sell stocks for a profit, or buy stocks at a low. Some stock traders are day traders, which means they buy and sell several times throughout the day. Others are simply active traders, placing a dozen or more trades per month.
+When people refer to the stock market being up or down, they’re generally referring to one of the major market indexes.
+A market index tracks the performance of a group of stocks, which either represents the market as a whole or a specific sector of the market, like technology or retail companies. You’re likely to hear most about the S&P 500, the Nasdaq composite and the Dow Jones Industrial Average; they are often used as proxies for the performance of the overall market.
+Investors use indexes to benchmark the performance of their own portfolios and, in some cases, to inform their stock trading decisions. You can also invest in an entire index through index funds and exchange-traded funds, or ETFs, which track a specific index or sector of the market.
+<br>
+<h3>Dividends</h3>
+
+    Corporations pay dividends out of retained earnings -- the accumulated profits of the company. Dividends are normally paid every quarter. The dividend yield is the annual payout divided by the current stock price. Dividends change when stock prices rise and fall. A corporation may also change the size of a dividend. Corporations do not need to change dividend amounts when the common stock price changes. However, a corporation committed to a particular dividend yield will need to increase the payout if the common stock price rises. When a stock price rises because of increased profits, the corporation might decide to boost dividends to “share the wealth” with stockholders, but it’s optional.
+<br>
+<h3>Preferred Stock</h3>
+
+    The dividends on preferred stock do not change over time. This has the effect of divorcing the value of preferred shares from the growth of the company.Traders price preferred shares based on their dividend yield relative to prevailing interest rates. If interest rates rise, preferred share prices fall and the dividend yield rises, keeping it competitive with higher interest rates. Lower rates boost preferred share prices. A corporation must pay its current preferred dividends in full before distributing any common stock dividends. “Cumulative” preferred shares also require that any missed dividends be paid before common stock dividends may be paid.
+<br>
+<h3>Rising Dividends</h3>
+
+    Many corporations, especially utilities and food companies, pride themselves on long uninterrupted records of rising dividend payments. Income-oriented investors find such stocks attractive because the dividend yield relative to their purchase price rises over time. The Gordon Dividend Growth Model calculates the value of a stock share as equal to the dividend per share one year hence divided by a growth premium, which is the required rate of return demanded by shareholders minus the dividend growth rate. The model works best for mature companies that have a predictable dividend growth rate. The model indicates that a dividend boost should energize a stock's price.
+<br>
+<h3>Dividend Cuts</h3>
+
+    Corporations and shareholders abhor dividend cuts because they might signal trouble ahead, such as anticipated poor earnings or a cash crunch. However, not all dividend cuts presage misfortune. For example, the board of directors might want to allocate the dividend to a share buyback program or to invest in exciting new technology. A missed interest payment can throw a company into default and bankruptcy, but a cut or missed dividend payment does not result in default. For this reason, when a corporation's board of directors evaluates its response to low cash reserves, it will suspend the dividend rather than default on an interest payment.
+</p>
+</div>
+<div class="flex-container" >
+    <div>
+    <form action='/fdrate/' method="POST" align="center">
+      <a href="/fdrate/" >
+      <input type="submit" value="fd rates">
+    </a>
+  </form>
+</div>
+  
+<div>
+    <form action="/bonds/" method="POST" align="center"> 
+      <input type="submit" name="b" id="b" value="bonds">
+        </form>
+      </div>
+      <div>    
+    <form action='/mf/' method="POST" align="center">
+    <a href='/mf/'>
+      <input type="submit" value="mutual funds">
+    </a>
+  </form>
+</div>
+  <div>
+  <form action='/stocks/' method="POST" align="center">
+    <a href='/stocks/'>
+      <input type="submit"  value="stocks">
+    </a>
+    </form>
+  </div>
+    
+  </div>
+    <br>
+</body>
+</html>

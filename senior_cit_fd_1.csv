@@ -1,0 +1,6 @@
+,fixed_dep_with_bank_name,less_than_one_year,one_to_five_year,more_than_five
+0,SBI,2.90   4.90 ,4.90   5.30 ,5.40 
+1,HDFC Bank,3.00   4.90 ,5.40   5.80 ,6.25 
+2,Canara Bank,2.95  4.95 ,5.70   6.00 ,6.00 
+3,ICICI Bank,3.00   4.90 ,5.40   5.85 ,6.30
+4,HSBC Bank,2.75   3.60 ,3.60   4.50 ,-

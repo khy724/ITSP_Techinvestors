@@ -1,10 +1,53 @@
 :root {
   --colour_1: #2684B7;
   --colour_2: #E3F1F9;
+  --colour_3: #006BE9;
 }
 
 .body {
+  background: #E3F1F9;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  color: black;
+  padding: 5em, 5em;
+  margin: 4 em;
+}
+
+.navbar .container nav {
+  background: var(--colour_1);
+  block-size: 1em;
+  border-style: solid;
+  border-color: white;
+}
+
+.navbar .container nav .primary-nav {
+  list-style-type: none;
+  border-color: white;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--colour_3);
+}
+
+.navbar .container nav .primary-nav .current {
   background: black;
+}
+
+.navbar .container nav .primary-nav li {
+  float: left;
+}
+
+.navbar .container nav .primary-nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar .container nav .primary-nav li a:hover:not(.active) {
+  background-color: #145274;
 }
 
 .title_bar {
@@ -48,5 +91,49 @@ th, td {
 
 th {
   border-bottom: 1px solid var(--colour_2);
+}
+
+.writeup {
+  font: "Verdana";
+  font-size: 1.2em;
+}
+
+h1 {
+  font: "Verdana";
+  font-size: 2.5em;
+  text-align: center;
+  color: white;
+  padding: auto;
+}
+
+h2 {
+  font: "Verdana";
+  font-size: 2em;
+  color: white;
+  padding: auto;
+}
+
+h3 {
+  font: "Verdana";
+  font-size: 1.5em;
+  color: white;
+  padding: auto;
+}
+
+h4 {
+  font: "Verdana";
+  font-size: 1.2em;
+  color: white;
+  padding: auto;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #2684B7;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=categories.css.map */

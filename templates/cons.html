@@ -37,35 +37,38 @@
         <span>Investors</span>
     </a>
 </div>
-<!--<div class="navbar">
+<div class="navbar">
     <div class="container">
         <nav>
             <ul class="primary-nav">
                 <div class="current_cont">
-                <li class="current">
-                <a href="#">Home  </a>
+                <li >
+                <a href="/">Home  </a>
                 </li>
-                <li>
-                <a href="asset.html">Asset Allocation Calculator</a>
+                <li class="current">
+                <a href="/asset/">Asset Allocation Calculator</a>
                 </li>
             </ul>
         </nav>
     </div>
-</div>-->
+</div>
+<br><br>
+<h1 align="center">Risk Profile: Conservative</h1>
+<br>
     <div class="hero-img" id="piechart_3d" style="width: 900px; height: 500px;"></div>
     <br><br>
-    <ul>
+    <ul class="anno">
       <li>Stocks
-        <ul>
-          <li>Large Cap Blend 15%</li>
-          <li>Mid Cap Blend 10%</li>
-          <li>Small Cap Blend 10%</li>
-          <li>Emerging Markets 5%</li>
+        <ul class="neesho">
+          <li>Large Cap Blend 15% &ensp; {{am*0.15}}</li>
+          <li>Mid Cap Blend 10% &ensp; {{am*0.1}}</li>
+          <li>Small Cap Blend 10% &ensp; {{am*0.1}}</li>
+          <li>Emerging Markets 5% &ensp; {{am*0.05}}</li>
         </ul>
       </li>
-      <li>Corporate Bonds 40%</li>
-      <li>Fd’s 10%</li>
-      <li>Mutual funds 10%</li>
+      <li>Corporate Bonds 40% &ensp; {{am*0.4}}</li>
+      <li>Fd’s 10% &ensp; {{am*0.1}}</li>
+      <li>Mutual funds 10% &ensp; {{am*0.1}}</li>
     </ul>
     <br><br><br>
     <ul>
@@ -74,17 +77,38 @@
       <li>someone with a portfolio that primarily includes investments in cash and bonds with some allocation in equities</li>
       
     </ul>
-    <form action='/fd/' method='POST'>
-      <button>click here to view fd rates</button>
-  </form>
-    <form action='/bonds/' method='POST'>
-      <button>click here to get more info on bonds</button>
-  </form>
-    <form action='/mf/' method='POST'>
-      <button>click here to get more info on mutual funds</button>
+  
+
+    <div class="flex-container" >
+      <div>
+      <form action='/fdrate/' method="POST" align="center">
+        <a href="/fdrate/" >
+        <input type="submit" value="fd rates">
+      </a>
     </form>
-    <form action='/stocks/' method='POST'>
-      <button>click here to get more info on stocks</button>
+  </div>
+    
+  <div>
+      <form action="/bonds/" method="POST" align="center"> 
+        <input type="submit" name="b" id="b" value="bonds">
+          </form>
+        </div>
+        <div>    
+      <form action='/mf/' method="POST" align="center">
+      <a href='/mf/'>
+        <input type="submit" value="mutual funds">
+      </a>
     </form>
+  </div>
+    <div>
+    <form action='/stocks/' method="POST" align="center">
+      <a href='/stocks/'>
+        <input type="submit"  value="stocks">
+      </a>
+      </form>
+    </div>
+      
+    </div>
+      <br>
 </body>
 </html>
