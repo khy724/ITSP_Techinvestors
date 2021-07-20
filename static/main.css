@@ -1,12 +1,12 @@
 :root {
-  --colour_1: #2684B7;
-  --colour_2: #006BE9;
+  --colour_1: #1b90cf;
+  --colour_2: #2183f3;
 }
 
 body {
-  background: #9aedfc;
+  background: #dff9fd;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif,monospace;
   font-size: 1.2em;
   color: black;
   padding: 5em, 5em;
@@ -16,19 +16,22 @@ body {
 .neesho {
   background: #3399ff;
   padding: 20px;
-  width: 500px;
+  width: 70%;
+  border-radius: 1em;
 }
 
 .anno {
   background: var(--colour_1);
   padding: 20px;
-  width: 550px;
+  width: 70%;
   color: white;
+  border-radius: 1em;
 }
 
 .kiso {
   padding: 20px;
   width: 700px;
+  border-radius: 1em;
 }
 
 /*ol li {
@@ -63,7 +66,7 @@ body {
 }
 
 .title_bar .logo span {
-  color: var(--colour_2);
+  color: var(--colour_1);
 }
 
 .navbar .container nav {
@@ -79,7 +82,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: var(--colour_2);
+  background-color: var(--colour_1);
 }
 
 .navbar .container nav .primary-nav .current {
@@ -108,24 +111,43 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 70%;
 }
 
 .flex-container {
+  /*display: flex;
+    //flex-wrap: nowrap;
+    padding: 0em 9em;
+    margin: 0em 2em;
+    width: 7em;
+    text-align: center;*/
+  margin: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 300px;
+  height: 80px;
+  border: 0em 10em;
   padding: 0em 20em;
-  width: 7em;
 }
 
 .flex-container > div {
-  width: 100px;
-  margin: 80px;
+  /*width: 100px;
+    margin: 2em;
+    padding: 0em 2em;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 2em;*/
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  border: 8px;
   text-align: center;
-  line-height: 75px;
-  font-size: 30px;
+  margin: 5px;
 }
 
 .writeup {
@@ -142,13 +164,14 @@ p {
 }
 
 input[type=submit], input[type=reset] {
-  background-color: var(--colour_2);
+  background-color: var(--colour_1);
   border: none;
   color: white;
   padding: 16px 32px;
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
+  border-radius: 2em;
 }
 
 table {
@@ -177,6 +200,17 @@ button {
   border: none;
   font-size: 1em;
   font: white;
+}
+
+.inp {
+  border-style: double;
+  border-color: black;
+  padding: 0em;
+  margin: 2em 28em;
+  width: 30%;
+  text-align: center;
+  border-radius: 2em;
+  border-width: 7px;
 }
 
 /*.image { 

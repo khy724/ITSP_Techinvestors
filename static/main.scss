@@ -1,32 +1,37 @@
 :root{
-    --colour_1: #2684B7;
-    --colour_2: #006BE9;
+    --colour_1: #1b90cf;
+    --colour_2: #2183f3;
 }
+
 body {
-    background: #9aedfc;//#E3F1F9 ;
+    background: #dff9fd;//#E3F1F9 ;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif,monospace;
     font-size: 1.2em;
     color: black;
     //text-align: center;
     padding: 5em, 5em;
     margin:4 em;
+    
 }
 .neesho {
     background: #3399ff;
     padding: 20px;
-    width: 500px;
+    width: 70%;
+    border-radius: 1em;
   }
   .anno{
       background: var(--colour_1);
       padding: 20px;
-    width: 550px;
+    width: 70%;
     color: white;
+    border-radius: 1em;
       }
 
     .kiso{
         padding: 20px;
         width: 700px;
+        border-radius: 1em;
     }
   
   /*ol li {
@@ -58,7 +63,7 @@ body {
         
 
         span{
-            color:var(--colour_2) ;
+            color:var(--colour_1) ;
         }
     }
 }
@@ -79,7 +84,7 @@ body {
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                background-color: var(--colour_2);
+                background-color: var(--colour_1);
                 .current{
                     background: black;
                 }
@@ -108,22 +113,39 @@ body {
     display: block;
   margin-left: auto;
   margin-right: auto;
-  //width: 80%;
+  width: 70%;
+  
 }
 .flex-container {
-    display: flex;
-    flex-wrap: nowrap;
-    padding: 0em 20em;
+    /*display: flex;
+    //flex-wrap: nowrap;
+    padding: 0em 9em;
+    margin: 0em 2em;
     width: 7em;
+    text-align: center;*/
+    margin: 30px;
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  height: 80px;
+  border: 0em 10em ;
+
+  padding: 0em 20em;
   }
   
   .flex-container > div {
 
-    width: 100px;
-    margin: 80px;
+    /*width: 100px;
+    margin: 2em;
+    padding: 0em 2em;
     text-align: center;
-    line-height: 75px;
-    font-size: 30px;
+    line-height: 1.5em;
+    font-size: 2em;*/
+    flex: 1 1 auto;
+  border: 8px ;
+  text-align: center;
+
+  margin: 5px;
   }
  
 .writeup{
@@ -138,7 +160,7 @@ p{
   width:60em;
 }
 input[type=submit], input[type=reset] {
-    background-color: var(--colour_2);
+    background-color: var(--colour_1);
     
     border: none;
     color: white;
@@ -146,6 +168,8 @@ input[type=submit], input[type=reset] {
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 2em;
+    
   }
   table {
     margin: 0 auto;
@@ -173,6 +197,16 @@ button{
   border: none;
   font-size: 1em;
   font: white;
+}
+.inp{
+  border-style:double;
+  border-color: black;
+  padding:0em;
+  margin:2em 28em;
+  width:30%;
+  text-align: center;
+  border-radius: 2em;
+  border-width: 7px;
 }
 
     /*.image { 

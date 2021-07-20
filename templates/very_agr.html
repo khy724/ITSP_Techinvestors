@@ -30,7 +30,7 @@
       }
     </script>
 </head>
-<body>
+<body style="background-color: turquoise;">
   <div class='title_bar'>
     <a class='logo' href="#">
         Tech
@@ -53,10 +53,12 @@
     </div>
 </div>
 <br><br>
-<h1 align="center">Risk Profile: Very Agressive</h1>
+<div style="border-style:solid; width:70%; margin:2em 12em; background-color: #dff9fd; border-radius: 2em; border-width: 5px; border-color:white;  ">
+<h1 align="center" style="color: #1b90cf;">Risk Profile: Very Agressive</h1>
 <br>
     <div class="hero-img" id="piechart_3d" style="width: 900px; height: 500px;"></div>
     <br><br>
+    <div align="center">
     <ul class="anno">
       <li>Stocks
         <ul class="neesho">
@@ -71,13 +73,14 @@
       <li>Mutual funds 10% &ensp; {{am*0.1}}</li>
     </ul>
     <br><br><br>
-    <ul>
+    <ul class="kiso">
       <li>primarily focused on pursuing above-average portfolio appreciation over time</li>
       <li>someone who can tolerate higher degrees of fluctuation in the value of his investments</li>
       <li>someone with high return expectations</li>
       <li>someone who won’t need the money from their investments for 15 years or more</li>
       <li>someone with a portfolio that has exposure to various asset classes but will be heavily invested in equities</li>
     </ul>
+  </div>
     <div class="flex-container" >
       <div>
       <form action='/fdrate/' method="POST" align="center">
@@ -109,5 +112,6 @@
       
     </div>
       <br>
+    </div>
 </body>
 </html>

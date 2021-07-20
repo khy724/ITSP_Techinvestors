@@ -30,7 +30,7 @@
       }
     </script>
 </head>
-<body>
+<body style="background-color: turquoise;">
   <div class='title_bar'>
     <a class='logo' href="#">
         Tech
@@ -53,11 +53,13 @@
     </div>
 </div>
 <br><br>
-<h1 align="center">Risk Profile: Very Conservative</h1>
-<br>
+<div style="border-style:solid; width:70%; margin:2em 12em; background-color: #dff9fd; border-radius: 2em; border-width: 5px; border-color:white;  ">
+<h1 align="center" style="color: #1b90cf;">Risk Profile: Very Conservative</h1>
+
     <div class="hero-img" id="piechart_3d" style="width: 900px; height: 500px;"></div>
     <br><br>
-    <ul class="anno">
+    <div align="center">
+    <ul class="anno" >
       <li>Stocks
         <ul class="neesho">
           <li>Large Cap Blend 10% &ensp; {{am*0.1}}</li>
@@ -71,14 +73,15 @@
       <li>Mutual funds 10% &ensp; {{am*0.1}}</li>
     </ul>
     <br><br><br>
-    <ul>
+    <ul class="kiso">
       <li>cautious or a first-time investor</li>
       <li>primarily focused on portfolio stability and preservation of capital</li>
       <li>will need the money from their investments in five years or less</li>
       <li>has a medium investment time horizon and seeks a growth potential that can compete with inflation concerns</li>
       <li>someone with a portfolio that primarily consists of investments in fd’s and bonds</li>
     </ul>
-    <div class="flex-container" >
+  </div>
+    <div class="flex-container" align="center">
       <div>
       <form action='/fdrate/' method="POST" align="center">
         <a href="/fdrate/" >
@@ -109,5 +112,6 @@
       
     </div>
       <br>
+    </div>
 </body>
 </html>

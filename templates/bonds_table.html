@@ -5,10 +5,18 @@
 {% endblock %}
 
 {% block body %}
-<br><br><br><br>
+<div class='title_bar'>
+  <a class='logo' href="#">
+      Tech
+      <span>Investors</span>
+  </a>
+</div>
+
+<br><br>
+
 
 <div class="cl">
-<center><h1>Table</h1></center>
+<center><h1>Bonds: Top picks</h1></center>
 <table class="table caption-top align-content-center">
     <thead>
       <tr> 
@@ -39,7 +47,7 @@
 <br><br>
 
 </div>
-<div class="flex-container" >
+<div class="flex-container"  align="center">
   <div>
   <form action='/fdrate/' method="POST" align="center">
     <a href="/fdrate/" >

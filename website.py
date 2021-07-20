@@ -236,7 +236,9 @@ def func11():
             
             '''df = fd_data_scrap.a(fd_data_scrap.a())
             df= fd_data_scrap.b(df)'''
-            df = fd_data_scrap.a()
+            #df = fd_data_scrap.a()
+            df = fd_data_scrap.func(fd_data_scrap.a())
+            df = fd_data_scrap.b(df)
 
             banks,interest_rate = df['Banks'], df['interest_rate']
 
@@ -288,11 +290,13 @@ def func19():
         day=int(request.form["vol"])
         sticker = []
         lticker = []
-        sticker = stock_5.a(day,amount)
-        lticker = stock_5.b(day,amount)
+        sticker = stock_5.a(day,small_cap)
+        lticker = stock_5.b(day,large_cap)
+        mticker = stock_5.c(day,mid_cap)
         array1 = stock_graph.a(sticker)
         array2 = stock_graph.a(lticker)
-        return render_template('stock_graph.html',array1=array1,array2=array2,LTicker=lticker,STicker=sticker)
+        array3 = stock_graph.a(mticker)
+        return render_template('stock_graph.html',array1=array1,array2=array2,array3=array3,LTicker=lticker,STicker=sticker, MTicker=mticker)
 
 ''''''
 ''''''
