@@ -1,0 +1,16 @@
+VSCode/PYcharm or any other IDE 
+
+Python libraries
+ flask
+ requests
+ html5lib
+ beautifulsoup4
+ pandas
+ csv
+ numPy
+ lxml
+ werkzeug.utils
+ yfinance
+ datetime
+ 
+run website.py in your IDE and open the local host URL in browser (http://127.0.0.1:5000/)
