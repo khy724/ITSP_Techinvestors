@@ -1,4 +1,4 @@
-
+![Flask: 2.0.1](https://img.shields.io/badge/Flask-2.0.01-yellowgreen)
 
 # ITSP_Techinvestors
 
