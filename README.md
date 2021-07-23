@@ -39,3 +39,34 @@ A website like this would highly benefit the people who have very less knowledge
 The given project is just a model and hence for prediction of top stocks we have used the already trained which is not being updated every time the website loads(as training stock prediction model takes time).
 However, if implemented on a large scale we could make this work by training models using active learning which will take not more than 5 secs for each model. 
 This way we will be training model at the end of the day after the market closes and then these models will be ready for the next day.
+
+#### How to use?
+* Make sure you are using python version >= 3.6 
+
+* Clone the repository 
+
+
+ ```bash
+  git clone khy724/ITSP_Techinvestors
+  ```
+  
+* Change the directory to ITSP_Techinvestors
+
+
+ ```bash
+  cd ITSP_Techinvestors
+  ```
+  
+ * Install the dependecies 
+
+
+ ```bash
+  pip3 install requirements.txt
+  ```
+  
+  * run the following line
+
+
+ ```bash
+  python3 website.py
+  ```
