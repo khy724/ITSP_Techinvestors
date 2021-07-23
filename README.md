@@ -71,4 +71,4 @@ This way we will be training model at the end of the day after the market closes
   python3 website.py
   ```
   
-  * Web app can be seen running on [localhost](http://127.0.0.1:5000/) server
+  Web app can be seen running on [localhost](http://127.0.0.1:5000/) server
