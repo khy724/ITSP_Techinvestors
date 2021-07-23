@@ -1,9 +1,9 @@
 # ITSP_Techinvestors
 #### Problem Statement
 
-*Our projects aims at simplifying the investment / trading related issues that most people face in their day to day lives.
-*Generally the investor / trader has to surf through a lot of sites and Asset categories before investing which makes the money investing process even more hectic ,cumbersome and time wasting for the individual. We plan to provide them with various aspects of fields wherein they could get information about , invest and directly compare based on what suits them the best .
-*A website like this would highly benefit the people who have very less knowledge about various investment schemes and prevent them from investing blindly.
+* Our projects aims at simplifying the investment / trading related issues that most people face in their day to day lives.
+* Generally the investor / trader has to surf through a lot of sites and Asset categories before investing which makes the money investing process even more hectic ,cumbersome and time wasting for the individual. We plan to provide them with various aspects of fields wherein they could get information about , invest and directly compare based on what suits them the best .
+* A website like this would highly benefit the people who have very less knowledge about various investment schemes and prevent them from investing blindly.
 
 #### Motivation
 
