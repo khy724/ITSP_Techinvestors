@@ -1,73 +1,3 @@
-<!--<!DOCTYPE html>
-<html>
-<head>
-	<title>Mutual funds</title>
-	<link rel="stylesheet" href="/static/categories.css">
-	
-</head>
-<body>
-	<div class='title_bar'>
-        <a class='logo' href="#">
-            Tech
-            <span>Investors</span>
-        </a>
-    </div>-->
-	<!--<button onclick="myFunction()">fd rates</button>
-    <script src="CsvToTable.js"></script>
-    <script>
-	    
-		    var csvtotable = new CsvToTable({
-		        csvFile: 'fd_data.csv'
-	        });
-	    function myFunction(){   
-	    csvtotable.run();};
-    </script>-->
-	<!--<script>
-		const age =sessionStorage.getItem('age');
-		var csv;
-		if(age>=65){
-             csv='senior_cit_fd.csv';
-		}
-		else{
-			csv= 'fd_data.csv';
-		}
-
-	</script>-->
-	<!--<h1>Mutual Funds</h1>
-	<button onclick="myFunction()">mutual funds rates</button>
-	<form action="/mf_junc/" method="POST">
-        <select name="filter" id="filter" onchange="getvalue(this)">
-             <option value=null></option>   
-            <option value="1_w">1_week</option>
-            <option value="1_m">1_month</option>
-            <option value="3_m">3_months</option>
-            <option value="6_m">6_months</option>
-			<option value="1_y">1_year</option>
-            <option value="3_y">3_years</option>
-            <option value="5_y">6_years</option>
-          </select>-->
-    <!--<script src="/static/CsvToTable.js"></script>
-    <script>
-	    
-		    var csvtotable = new CsvToTable({
-		        csvFile: "../mutual_funds.csv"
-	        });
-	    function myFunction(){   
-	    csvtotable.run();}
-    </script>;-->
-<!--	<input type="submit" class="hero-img" onclick="handleSubmit()" value="Submit">
-	<script>
-        function handleSubmit(){
-        //const profile= document.getElementById("risk_profiles").value;
-        sessionStorage.setItem("mf_time", mf_time);
-        //sessionStorage.setItem("profile",profile);
-        
-    }
-    </script>
-	
-	
-</body>
-</html>-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -82,31 +12,9 @@
             <span>Investors</span>
         </a>
     </div>
-	<!--<button onclick="myFunction()">fd rates</button>
-    <script src="CsvToTable.js"></script>
-    <script>
-	    
-		    var csvtotable = new CsvToTable({
-		        csvFile: 'fd_data.csv'
-	        });
-	    function myFunction(){   
-	    csvtotable.run();};
-    </script>-->
-	<!--<script>
-		const age =sessionStorage.getItem('age');
-		var csv;
-		if(age>=65){
-             csv='senior_cit_fd.csv';
-		}
-		else{
-			csv= 'fd_data.csv';
-		}
-
-	</script>-->
     
 	<br><br>
 	<h1 align="center">Mutual Funds</h1>
-	<!--<button onclick="myFunction()">mutual funds rates</button>-->
 	<form action="/mf_junc/" method="POST" align="center">
         <select name="filter" id="filter" onclick= 'myFunction()' onchange="getvalue(this)">
              <option value=null></option>   
@@ -114,20 +22,11 @@
             <option value="1_m">1_month</option>
             <option value="3_m">3_months</option>
             <option value="6_m">6_months</option>
-			<option value="1_y">1_year</option>
+		      	<option value="1_y">1_year</option>
             <option value="3_y">3_years</option>
             <option value="5_y">6_years</option>
           </select>
 		  <input type="submit" onclick="handleSubmit()" value="Submit" align="center">
-    <!--<script src="/static/CsvToTable.js"></script>
-    <script>
-	    
-		    var csvtotable = new CsvToTable({
-		        csvFile: "../mutual_funds.csv"
-	        });
-	    function myFunction(){   
-	    csvtotable.run();}
-    </script>;-->
 	<div class="writeup">
 	<p class="writeup" align="center">
 		<h2> Why invest in mutual funds</h2>
@@ -168,9 +67,7 @@
 	
 	<script>
         function handleSubmit(){
-        //const profile= document.getElementById("risk_profiles").value;
         sessionStorage.setItem("mf_time", mf_time);
-        //sessionStorage.setItem("profile",profile);
         
     }
     </script>

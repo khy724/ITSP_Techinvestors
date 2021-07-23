@@ -3,7 +3,7 @@ import requests
 import csv
 import pandas as pd
 def a():
-    csv_file=open('dividend_stock.csv','w')
+    csv_file=open('csv/dividend_stock.csv','w')
 
     csv_writer=csv.writer(csv_file)
     csv_writer.writerow(['company_name ','p/e_ratio', '1_yr_return_pr', 'payout_ratio_pr', '3_yr_avg_div_payout','prize_value','1_yr_profit_growth_pr'])
@@ -37,5 +37,5 @@ def a():
 
 
     csv_file.close()
-    df = pd.read_csv('dividend_stock.csv')
+    df = pd.read_csv('csv/dividend_stock.csv')
     return df

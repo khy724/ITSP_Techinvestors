@@ -14,55 +14,10 @@
             <span>Investors</span>
         </a>
     </div>
-    <!--<div class="navbar">
-        <div class="container">
-            <nav>
-                <ul class="primary-nav">
-                    <div class="current_cont">
-                    <li class="current">
-                    <a href="#">Home  </a>
-                    </li>
-                    <li>
-                    <a href="asset.html">Asset Allocation Calculator</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>-->
-   
-    <!--<h2>
-        Age: <span id="result-age" />
-    </h2>
-    <h2>
-        Amount: <span id="result-amount" />
-    </h2>
-    <h2>
-        Profile: <span id="result-profile" />
-    </h2>-->
-    
     <script>
-        
-
-// Via Query parameters - GET
-/* const params = (new URL(document.location)).searchParams;
-const name = params.get('name');
-const surname = params.get('surname'); */
-
-// Via local Storage
-/* const name = localStorage.getItem('NAME');
-const surname = localStorage.getItem('SURNAME'); */
-
-
-const bonds_per = sessionStorage.getItem('bonds_per');
-
-/*document.getElementById('result-age').innerHTML = age;
-document.getElementById('result-amount').innerHTML = amount;
-document.getElementById('result-profile').innerHTML = profile;*/
-
-
+      const bonds_per = sessionStorage.getItem('bonds_per');
     </script>
     <script>
-        //console.log(age);
        window.addEventListener('load',() =>{
        if(bonds_per === '0_1'){
             window.location.href = '/bond_0_1/';
@@ -77,9 +32,6 @@ document.getElementById('result-profile').innerHTML = profile;*/
         else if(bonds_per === '5_'){
             window.location.href = "/bond_5_/";
         }
-        /*else{
-            window.alert('error');
-        }*/
      })
     </script>
     

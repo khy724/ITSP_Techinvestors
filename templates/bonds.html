@@ -13,17 +13,6 @@
         <span>Investors</span>
     </a>
 </div>
-	<!--<button onclick="myFunction()">fd rates</button>
-    <script src="CsvToTable.js"></script>
-    <script>
-	    
-		    var csvtotable = new CsvToTable({
-		        csvFile: 'fd_data.csv'
-	        });
-	    function myFunction(){   
-	    csvtotable.run();};
-    </script>-->
-    
     <br><br>
     <h1 align="center">Bonds</h1>
     <form action="/bonds_junc/" method="POST" align="center" >
@@ -77,36 +66,11 @@
 </div>
     <script>
         function handleSubmit(){
-        //const profile= document.getElementById("risk_profiles").value;
         sessionStorage.setItem("bonds_per", bonds_per);
-        //sessionStorage.setItem("profile",profile);
         
     }
     </script>
-    <!--<script>
-         if(profile === '0_1'){
-             csv ="../india_bonds_0_1.csv";
-         }
-         else if(profile === '1_3'){
-             csv = "../india_bonds_1_3.csv";
-         }
-         else if(profile === '3_5'){
-             csv = "../india_bonds_3_5.csv";
-         }
-         else{
-             csv = "../india_bonds_5_plus.csv";
-         }
-    </script>
-	<button onclick="myFunction()">top bond schemes</button>
-    <script src="/static/CsvToTable.js"></script>
-    <script>
-	    
-		    var csvtotable = new CsvToTable({
-		        csvFile: csv
-	        });
-	    function myFunction(){   
-	    csvtotable.run();};
-    </script>-->
+
     <div class="flex-container" >
         <div>
         <form action='/fdrate/' method="POST" align="center">

@@ -9,8 +9,6 @@ def inp_data(ticker1):
     data.reset_index(inplace=True)
     return data
 def a(stock_list):
-    #start="2018-05-01"
-    #today=date.today().strftime("%Y-%m-%d")
     
     data1= inp_data(str(stock_list[0]))
     data1= data1.drop(['Open', 'High', 'Low', 'Adj Close', 'Volume','Date'], axis= 1)

@@ -36,22 +36,13 @@
 <div class="inp">
     <form action="/asset/" method="POST" class="hero-img" align="center">
         <h3>Enter age:</h3>
-        <input type="text" name="age" id="age">
+        <input type="number" name="age" id="age" oninvalid="alert('Please input your age');" required>
         <br>
         <h3>Enter amount to be invested:</h3>
-        <input type="text" name="amount" id="amount">
+        <input type="number" name="amount" id="amount" oninvalid="alert('Please input the investment amount');" required>
         <br><br><br>
-        <!--<form action="/action_page.php">
-            <label for="risk_profiles1">Choose a risk profile:</label>
-            <select name="risk_profiles" id="risk profiles">
-              <option value="mod">Moderate</option>
-              <option value="very_cons">Very Conservative</option>
-              <option value="cons">Conservative</option>
-              <option value="agr">Aggressive</option>
-              <option value="very_agr">Very Aggressive</option>
-            </select>-->
             <h3>choose a suitable risk profile:</h3>
-            <select name="filter" id="filter" onchange="getvalue(this)">
+            <select name="filter" id="filter" onchange="getvalue(this)" oninvalid="alert('Please select a risk profile');" required>
               <option value=null></option>  
               <option value="mod">Moderate</option>
               <option value="very_cons">Very Conservative</option>
@@ -105,11 +96,9 @@
             function handleSubmit(){
             const amount= document.getElementById("amount").value;
             const age= document.getElementById("age").value;
-            //const profile= document.getElementById("risk_profiles").value;
             sessionStorage.setItem("age", age);
             sessionStorage.setItem("amount", amount);
             sessionStorage.setItem("profile", profile);
-            //sessionStorage.setItem("profile",profile);
             window.location.href = "result.html";
         }
         </script>

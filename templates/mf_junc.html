@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width= device-width, initial-scale=1.0">
-    <title>bonds</title>
+    <title>mutual funds</title>
     <link rel="stylesheet" href="/static/main.css">
 </head>
 
@@ -16,55 +16,11 @@
             <span>Investors</span>
         </a>
     </div>
-    <!--<div class="navbar">
-        <div class="container">
-            <nav>
-                <ul class="primary-nav">
-                    <div class="current_cont">
-                    <li class="current">
-                    <a href="#">Home  </a>
-                    </li>
-                    <li>
-                    <a href="asset.html">Asset Allocation Calculator</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>-->
-
-    <!--<h2>
-        Age: <span id="result-age" />
-    </h2>
-    <h2>
-        Amount: <span id="result-amount" />
-    </h2>
-    <h2>
-        Profile: <span id="result-profile" />
-    </h2>-->
 
     <script>
-
-
-        // Via Query parameters - GET
-        /* const params = (new URL(document.location)).searchParams;
-        const name = params.get('name');
-        const surname = params.get('surname'); */
-
-        // Via local Storage
-        /* const name = localStorage.getItem('NAME');
-        const surname = localStorage.getItem('SURNAME'); */
-
-
-        const mf_time = sessionStorage.getItem('mf_time');
-
-        /*document.getElementById('result-age').innerHTML = age;
-        document.getElementById('result-amount').innerHTML = amount;
-        document.getElementById('result-profile').innerHTML = profile;*/
-
-
+       const mf_time = sessionStorage.getItem('mf_time');
     </script>
     <script>
-        //console.log(age);
         window.addEventListener('load', () => {
             if (mf_time === "1_w") {
                 window.location.href = '/1_week/';
@@ -88,9 +44,6 @@
             else if (mf_time  === '5_y') {
                     window.location.href = "/5_years/";
                 }
-                /*else{
-                    window.alert('error');
-                }*/
             })
     </script>
 
